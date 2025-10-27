@@ -1,0 +1,574 @@
+{
+    "temperature": 1,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "top_p": 1,
+    "top_k": 0,
+    "top_a": 1,
+    "min_p": 0,
+    "repetition_penalty": 1,
+    "openai_max_context": 4600,
+    "openai_max_tokens": 600,
+    "wrap_in_quotes": true,
+    "names_behavior": 0,
+    "send_if_empty": "",
+    "impersonation_prompt": "Change of plans! Roleplay as the user's {{user}} now. Use the chat history so far for their writing style.",
+    "new_chat_prompt": "",
+    "new_group_chat_prompt": "",
+    "new_example_chat_prompt": "Here is an example of how to respond, outside the chat's context:",
+    "continue_nudge_prompt": "Your last message got cut off. Continue writing it. Do not include any parts of the original one. Respond with a direct continuation only.",
+    "bias_preset_selected": "Default (none)",
+    "max_context_unlocked": false,
+    "wi_format": "{0}",
+    "scenario_format": "{{scenario}}",
+    "personality_format": "{{personality}}{{trim}}",
+    "group_nudge_prompt": "",
+    "stream_openai": true,
+    "prompts": [
+        {
+            "name": " Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for the purposes of card override. }}{{trim}}",
+            "identifier": "main",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "name": "NSFW Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for the purposes of card override. }}{{trim}}",
+            "identifier": "nsfw",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "dialogueExamples",
+            "name": "Chat Examples",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "name": "Jailbreak Prompt",
+            "system_prompt": true,
+            "role": "system",
+            "content": "{{// Empty for the purposes of card override. }}{{trim}}",
+            "identifier": "jailbreak",
+            "forbid_overrides": false,
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "chatHistory",
+            "name": "Chat History",
+            "system_prompt": true,
+            "marker": true
+        },
+        {
+            "identifier": "worldInfoAfter",
+            "name": "World Info (After)",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "worldInfoBefore",
+            "name": "World Info (Before)",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "enhanceDefinitions",
+            "role": "system",
+            "name": " Enhance Definitions",
+            "content": "{{// Empty for the purposes of card override. }}{{trim}}",
+            "system_prompt": true,
+            "marker": false,
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "charDescription",
+            "name": "Description",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "charPersonality",
+            "name": "Personality",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "scenario",
+            "name": "Scenario",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "personaDescription",
+            "name": "Persona",
+            "system_prompt": true,
+            "marker": true,
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "2d052896-514b-46da-9d1b-2ca05dca2d66",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": " <reference>",
+            "role": "system",
+            "content": "Here are some example messages that work becautifully! You can use them as style guide (length and stucture), character reference (emotional reactions, mannerisms). These are not canon events; no need to maintain continuity. My comments in [brackets].\n<reference>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "95c1f757-ee53-4656-bc16-90cb51b2328b",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": " </reference>",
+            "role": "system",
+            "content": "\n</reference>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "05f596ff-ceef-4751-b90c-8d27bc296ba3",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</user>",
+            "role": "system",
+            "content": "</user character>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "4053badc-3ae3-4f4e-8667-2a4b14d6a734",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</characters>",
+            "role": "system",
+            "content": "</characters>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "cf57d752-9196-41bb-876a-03059c57b357",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<scenario>",
+            "role": "system",
+            "content": "\nCurrent scenario:\n<scenario>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "93f9bb16-0510-466e-890f-1f50832acc9b",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</scenario>",
+            "role": "system",
+            "content": "</scenario>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "f1e126e2-6cb2-4193-9222-0993f8488650",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "Roleplay instructions",
+            "role": "system",
+            "content": "{{// Main prompt for roleplay. }}{{trim}}\nRespond as the narrator and any relevant characters in this continuous, immersive roleplay. \n\nThere's no specific goal in the roleplay that must be accomplished! Just building something fun and creative together. You can explore the character and taking the plot into any direction you find interesting. \n\nIt's okay for characters to: \n- express opinions, assert boundaries and show authentic emotional reactions. I love seeing what you come up with! \n- express uncertainty\n- ask questions \n- not fix problems, and to leave tension unresolved! This is great actually! \n- take initiative on what happens next\n- take their time instead of rushing to the next scene",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "forbid_overrides": false,
+            "injection_order": 100,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "1a5ccb5f-ddf7-4647-a8d4-791626baf0de",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<user>",
+            "role": "system",
+            "content": "\nAn overview of the character the user plays as:\n<user character name=\"{{user}}\">",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "83945990-3802-47ac-a0a1-86669ff32073",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<characters>",
+            "role": "system",
+            "content": "\nDescriptions of characters you play as:\n<characters names=\"{{group}}\">",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "0d91529a-9e32-4d97-8764-529779adbbd0",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "+ Situational Toggles",
+            "role": "system",
+            "content": "{{// Enable none, one, or both below depending on your needs. }}{{trim}}",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "forbid_overrides": false,
+            "injection_trigger": []
+        },
+        {
+            "identifier": "aec5b0c8-c792-4245-ab95-22e947cf24d4",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<history>",
+            "role": "system",
+            "content": "\nHere is the chat history:\n<history>",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "857fd06f-2425-4406-8412-6a5c280a5249",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</history>",
+            "role": "system",
+            "content": "</history>",
+            "injection_position": 1,
+            "injection_depth": 1,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "8e8d7718-4377-49d5-b3c2-70899bfa8f14",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "<message>",
+            "role": "system",
+            "content": "\nThe latest user's input:\n<message>",
+            "injection_position": 1,
+            "injection_depth": 1,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "d7288abb-29f5-42a5-8042-7c250cbd1c25",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "</message>",
+            "role": "system",
+            "content": "</message>\nIt's your turn. You've got this.",
+            "injection_position": 1,
+            "injection_depth": 0,
+            "injection_order": 98,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "7bb1ab4e-b830-442c-b7a5-146c0e181cde",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "Group Nudge",
+            "role": "system",
+            "content": "{{// Enable in group chats. }}{{trim}}\nOnly respond as {{char}}.",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        },
+        {
+            "identifier": "b6e37ae6-1474-4e68-9253-7fa6634b61ab",
+            "system_prompt": false,
+            "enabled": false,
+            "marker": false,
+            "name": "",
+            "role": "system",
+            "content": "",
+            "injection_position": 0,
+            "injection_depth": 4,
+            "injection_order": 100,
+            "injection_trigger": [],
+            "forbid_overrides": false
+        }
+    ],
+    "prompt_order": [
+        {
+            "character_id": 100000,
+            "order": [
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": false
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                }
+            ]
+        },
+        {
+            "character_id": 100001,
+            "order": [
+                {
+                    "identifier": "f1e126e2-6cb2-4193-9222-0993f8488650",
+                    "enabled": true
+                },
+                {
+                    "identifier": "main",
+                    "enabled": true
+                },
+                {
+                    "identifier": "nsfw",
+                    "enabled": true
+                },
+                {
+                    "identifier": "enhanceDefinitions",
+                    "enabled": true
+                },
+                {
+                    "identifier": "jailbreak",
+                    "enabled": true
+                },
+                {
+                    "identifier": "1a5ccb5f-ddf7-4647-a8d4-791626baf0de",
+                    "enabled": true
+                },
+                {
+                    "identifier": "personaDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "05f596ff-ceef-4751-b90c-8d27bc296ba3",
+                    "enabled": true
+                },
+                {
+                    "identifier": "83945990-3802-47ac-a0a1-86669ff32073",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charDescription",
+                    "enabled": true
+                },
+                {
+                    "identifier": "charPersonality",
+                    "enabled": true
+                },
+                {
+                    "identifier": "4053badc-3ae3-4f4e-8667-2a4b14d6a734",
+                    "enabled": true
+                },
+                {
+                    "identifier": "cf57d752-9196-41bb-876a-03059c57b357",
+                    "enabled": false
+                },
+                {
+                    "identifier": "scenario",
+                    "enabled": false
+                },
+                {
+                    "identifier": "93f9bb16-0510-466e-890f-1f50832acc9b",
+                    "enabled": false
+                },
+                {
+                    "identifier": "2d052896-514b-46da-9d1b-2ca05dca2d66",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoBefore",
+                    "enabled": true
+                },
+                {
+                    "identifier": "worldInfoAfter",
+                    "enabled": true
+                },
+                {
+                    "identifier": "95c1f757-ee53-4656-bc16-90cb51b2328b",
+                    "enabled": true
+                },
+                {
+                    "identifier": "dialogueExamples",
+                    "enabled": true
+                },
+                {
+                    "identifier": "aec5b0c8-c792-4245-ab95-22e947cf24d4",
+                    "enabled": true
+                },
+                {
+                    "identifier": "chatHistory",
+                    "enabled": true
+                },
+                {
+                    "identifier": "857fd06f-2425-4406-8412-6a5c280a5249",
+                    "enabled": true
+                },
+                {
+                    "identifier": "8e8d7718-4377-49d5-b3c2-70899bfa8f14",
+                    "enabled": true
+                },
+                {
+                    "identifier": "d7288abb-29f5-42a5-8042-7c250cbd1c25",
+                    "enabled": true
+                },
+                {
+                    "identifier": "0d91529a-9e32-4d97-8764-529779adbbd0",
+                    "enabled": true
+                },
+                {
+                    "identifier": "7bb1ab4e-b830-442c-b7a5-146c0e181cde",
+                    "enabled": false
+                }
+            ]
+        }
+    ],
+    "assistant_prefill": "",
+    "assistant_impersonation": "",
+    "claude_use_sysprompt": true,
+    "use_makersuite_sysprompt": true,
+    "squash_system_messages": true,
+    "image_inlining": true,
+    "inline_image_quality": "auto",
+    "video_inlining": true,
+    "continue_prefill": false,
+    "continue_postfix": "",
+    "function_calling": false,
+    "show_thoughts": true,
+    "reasoning_effort": "auto",
+    "enable_web_search": false,
+    "request_images": false,
+    "seed": -1,
+    "n": 1,
+    "extensions": {}
+}
